@@ -377,9 +377,7 @@ namespace Kentico.AcceleratedMobilePages
         /// </summary>
         private string GetDocumentPath()
         {
-            var documentPath = !String.IsNullOrEmpty(RequestContext.CurrentRelativePath)
-                                ? RequestContext.CurrentRelativePath
-                                : DocumentContext.CurrentAliasPath;
+            var documentPath = RequestContext.CurrentRelativePath;
 
             return documentPath + Settings.CmsFriendlyUrlExtension;
         }
